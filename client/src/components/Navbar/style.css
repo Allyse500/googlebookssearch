@@ -1,0 +1,9 @@
+nav.navbar.navbar-default {
+  margin-bottom: 0;
+}
+
+.navbar-nav{
+  display: grid;
+  grid-template-columns: repeat(10, auto);
+  padding-bottom: 10px
+}
