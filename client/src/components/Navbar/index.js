@@ -11,13 +11,13 @@ function Navbar() {
       <div>
         <ul className="navbar-nav">
 
-        <Link className="navbar-brand" to="/" style = {{color: "white", fontSize: "180%", textDecoration: "none"}}>
+        <Link className="navbar-brand" to="/" id= "title" style = {{color: "white", fontSize: "180%", textDecoration: "none"}}>
         Google Books Search
       </Link>
 
           {/* <li className="nav-item"> */}
             <Link
-              to="/"
+              to="/" id = "search"
               className={
                 window.location.pathname === "/" || window.location.pathname === "/home"
                   ? "nav-link active"
@@ -30,7 +30,7 @@ function Navbar() {
           {/* </li> */}
           {/* <li className="nav-item"> */}
             <Link
-              to="/saved"
+              to="/saved" id = "saved"
               className={window.location.pathname === "/saved" ? "nav-link active" : "nav-link"}
               style = {{color: "white", fontSize: "130%", textDecoration: "none"}}
             >
