@@ -37,7 +37,9 @@ function Navbar() {
               Saved
             </Link>
           {/* </li> */}
+          <div id="searchform">
           <SearchForm />
+          </div>
         </ul>
       </div>
       
