@@ -14,8 +14,6 @@ function Navbar() {
         <Link className="navbar-brand" to="/" id= "title" style = {{color: "white", fontSize: "180%", textDecoration: "none"}}>
         Google Books Search
       </Link>
-
-          {/* <li className="nav-item"> */}
             <Link
               to="/" id = "search"
               className={
@@ -27,8 +25,6 @@ function Navbar() {
             >
               Search
             </Link>
-          {/* </li> */}
-          {/* <li className="nav-item"> */}
             <Link
               to="/saved" id = "saved"
               className={window.location.pathname === "/saved" ? "nav-link active" : "nav-link"}
@@ -36,7 +32,6 @@ function Navbar() {
             >
               Saved
             </Link>
-          {/* </li> */}
           <div id="searchform">
           <SearchForm />
           </div>
