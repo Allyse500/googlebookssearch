@@ -9,12 +9,30 @@ nav.navbar.navbar-default {
   text-align: center;
   margin-top: 0;
 }
-#search:hover, #saved:hover{
+#saved:hover{
   background-color: rgb(255, 75, 75);
   border-radius: 4px;
   transition: all 0.2s ease-out;
 }
 
-#search, #saved, #searchform{
-transform: translateY(20%)
+#saved {
+transform: translateY(30%);
+margin-bottom: 10px;
+}
+
+#navbar {
+  background-color: red;
+  color: white;
+}
+
+#title {
+  transform: translateY(12%)
+}
+
+#form {
+  transform: translate(0%, 30%)
+}
+
+#searchbtn {
+  transform: translate(310%, -108%)
 }
