@@ -6,8 +6,9 @@ import "./style.css";
 // Depending on the current path, this component sets the "active" class on the appropriate navigation link item
 function Navbar() {
 
-const style = {
-
+function search () {
+  document.getElementById('content').innerHTML = 
+  document.getElementById('term').value;
 }
 
   return (
@@ -42,11 +43,15 @@ const style = {
                       />
                     </div>
                 </form>
-                <button id = "searchbtn">Search</button> 
+                <button id = "searchbtn" onClick = {search}>Search</button> 
               </div>
             </ul>        
           </div>      
         </nav>
+      </div>
+
+      <div id ="content">
+        Welcome to Search Page
       </div>
     </div>
   );
