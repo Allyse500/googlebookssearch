@@ -9,7 +9,8 @@ function Navbar() {
 
 function search () {
   var input = document.getElementById('term').value;
-  axios.get("https://www.googleapis.com/books/v1/volumes?q=" + input.split(" ").join("+")+"&key=APIKEY")
+  var APIKEY = process.env.APIKEY;
+  axios.get("https://www.googleapis.com/books/v1/volumes?q=" + input.split(" ").join("+")+"&key=" + APIKEY)
   .then(function(response){
   var myJSON = JSON.stringify(response.data.items[0].volumeInfo.title);
   document.getElementById("content").innerHTML = myJSON;
