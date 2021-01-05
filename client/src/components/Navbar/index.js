@@ -1,3 +1,4 @@
+import axios from "axios";
 import React from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
@@ -7,8 +8,12 @@ import "./style.css";
 function Navbar() {
 
 function search () {
-  document.getElementById('content').innerHTML = 
-  document.getElementById('term').value;
+  var input = document.getElementById('term').value;
+  axios.get("https://www.googleapis.com/books/v1/volumes?q=" + input.split(" ").join("+")+"&key=APIKEY")
+  .then(function(response){
+  var myJSON = JSON.stringify(response.data.items[0].volumeInfo.title);
+  document.getElementById("content").innerHTML = myJSON;
+  }).catch(err => console.log(err));
 }
 
   return (
