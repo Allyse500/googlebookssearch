@@ -43,4 +43,5 @@ margin-bottom: 10px;
 
 #save {
   transform: translateX(1300%);
+  display: none;
 }

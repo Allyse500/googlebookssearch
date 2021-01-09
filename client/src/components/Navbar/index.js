@@ -11,6 +11,7 @@ function Navbar() {
 
 function search () {
   var input = document.getElementById('term').value;
+  
   axios.get("https://www.googleapis.com/books/v1/volumes?q=" + input.split(" ").join("+")+"&" + process.env.REACT_APP_APIKEY)
   .then(function(response){
   var myJSON = JSON.stringify("Title: " + response.data.items[0].volumeInfo.title + "<br><br>" +
@@ -19,9 +20,16 @@ function search () {
    "Image: <br><br>" + "<img src='" + response.data.items[0].volumeInfo.imageLinks.thumbnail+ "'" + "<br><br><br><br>" + 
    "Link: " + "<a href='" + response.data.items[0].volumeInfo.previewLink + "'>" + response.data.items[0].volumeInfo.previewLink + "</a>");
   document.getElementById("content").innerHTML = myJSON;
+
+  document.getElementById('save').style.display = "block";
+  
   }).catch(err => console.log(err));
+
 }
 
+// function save () {
+//   axios.post()
+// }
   return (
     <div>
       <div id="navbar">
