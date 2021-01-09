@@ -16,8 +16,8 @@ function search () {
   var myJSON = JSON.stringify("Title: " + response.data.items[0].volumeInfo.title + "<br><br>" +
    "Authors: " + response.data.items[0].volumeInfo.authors[0] + "<br><br>" +
    "Description: " + response.data.items[0].volumeInfo.description + "<br><br>" +
-   "Image: " + response.data.items[0].volumeInfo.imageLinks.thumbnail + "<br><br>" + 
-   "Link: " + response.data.items[0].volumeInfo.previewLink);
+   "Image: <br><br>" + "<img src='" + response.data.items[0].volumeInfo.imageLinks.thumbnail+ "'" + "<br><br><br><br>" + 
+   "Link: " + "<a href='" + response.data.items[0].volumeInfo.previewLink + "'>" + response.data.items[0].volumeInfo.previewLink + "</a>");
   document.getElementById("content").innerHTML = myJSON;
   }).catch(err => console.log(err));
 }
