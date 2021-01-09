@@ -42,6 +42,14 @@ margin-bottom: 10px;
 }
 
 #save {
-  transform: translateX(1300%);
+  transform: translateX(1327%);
   display: none;
+}
+
+#savedmsg {
+  display: none;
+  text-align: center;
+  color: green;
+  transform: translate(60px, -20px);
+  font-style: italic;
 }

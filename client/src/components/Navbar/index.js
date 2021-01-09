@@ -22,14 +22,16 @@ function search () {
   document.getElementById("content").innerHTML = myJSON;
 
   document.getElementById('save').style.display = "block";
-  
+
   }).catch(err => console.log(err));
 
 }
 
-// function save () {
-//   axios.post()
-// }
+function save () {
+  // axios.post()
+  document.getElementById('savedmsg').style.display = "block";
+
+}
   return (
     <div>
       <div id="navbar">
@@ -73,7 +75,8 @@ function search () {
         Welcome to Search Page
       </div>
       <br></br>
-      <button id = "save">Save</button>
+      <button id = "save" onClick = {save}>Save</button>
+      <div id = "savedmsg">Saved!</div>
     </div>
   );
 }
