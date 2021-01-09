@@ -3,6 +3,7 @@ const path = require("path");
 const PORT = process.env.PORT || 3001;
 const app = express();
 const mongoose = require("mongoose");
+var APIKEY = process.env.REACT_APP_APIKEY;
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));

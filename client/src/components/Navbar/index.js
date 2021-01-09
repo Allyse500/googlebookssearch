@@ -2,6 +2,8 @@ import axios from "axios";
 import React from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
+
+
 // import SearchForm from "../SearchForm";
 
 // Depending on the current path, this component sets the "active" class on the appropriate navigation link item
@@ -9,10 +11,13 @@ function Navbar() {
 
 function search () {
   var input = document.getElementById('term').value;
-  var APIKEY = process.env.APIKEY;
-  axios.get("https://www.googleapis.com/books/v1/volumes?q=" + input.split(" ").join("+")+"&key=" + APIKEY)
+  axios.get("https://www.googleapis.com/books/v1/volumes?q=" + input.split(" ").join("+")+"&" + process.env.REACT_APP_APIKEY)
   .then(function(response){
-  var myJSON = JSON.stringify(response.data.items[0].volumeInfo.title);
+  var myJSON = JSON.stringify("Title: " + response.data.items[0].volumeInfo.title + "<br><br>" +
+   "Authors: " + response.data.items[0].volumeInfo.authors[0] + "<br><br>" +
+   "Description: " + response.data.items[0].volumeInfo.description + "<br><br>" +
+   "Image: " + response.data.items[0].volumeInfo.imageLinks.thumbnail + "<br><br>" + 
+   "Link: " + response.data.items[0].volumeInfo.previewLink);
   document.getElementById("content").innerHTML = myJSON;
   }).catch(err => console.log(err));
 }
