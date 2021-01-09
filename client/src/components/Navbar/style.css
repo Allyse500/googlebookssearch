@@ -36,3 +36,7 @@ margin-bottom: 10px;
 #searchbtn {
   transform: translate(310%, -108%)
 }
+
+#content {
+  text-align: center;
+}
