@@ -64,6 +64,8 @@ function search () {
       <div id ="content">
         Welcome to Search Page
       </div>
+      <br></br>
+      <button id = "save">Save</button>
     </div>
   );
 }

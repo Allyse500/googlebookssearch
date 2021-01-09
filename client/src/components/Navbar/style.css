@@ -40,3 +40,7 @@ margin-bottom: 10px;
 #content {
   text-align: center;
 }
+
+#save {
+  transform: translateX(1300%);
+}
