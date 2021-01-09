@@ -72,7 +72,6 @@ function save () {
       </div>
 
       <div id ="content">
-        Welcome to Search Page
       </div>
       <br></br>
       <button id = "save" onClick = {save}>Save</button>
