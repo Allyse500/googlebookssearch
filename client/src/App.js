@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import "./App.css";
 import Saved from "./components/Navbar/saved";
+import Search from "./components/Navbar/search";
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
     <Router>
       <div>
         <Navbar />
+        <Route exact path="/search" component={Search} />
         <Route exact path="/saved" component={Saved} />
       </div>
     </Router>

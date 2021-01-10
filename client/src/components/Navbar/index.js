@@ -2,6 +2,7 @@ import axios from "axios";
 import React from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
+// import {Search} from "./search";
 
 
 // import SearchForm from "../SearchForm";
@@ -9,29 +10,33 @@ import "./style.css";
 // Depending on the current path, this component sets the "active" class on the appropriate navigation link item
 function Navbar() {
 
-function search () {
-  var input = document.getElementById('term').value;
+  function search () {
+    var input = document.getElementById('term').value;
+    
+    axios.get("https://www.googleapis.com/books/v1/volumes?q=" + input.split(" ").join("+")+"&" + process.env.REACT_APP_APIKEY)
+    .then(function(response){
+    var myJSON = JSON.stringify("Title: " + response.data.items[0].volumeInfo.title + "<br><br>" +
+     "Authors: " + response.data.items[0].volumeInfo.authors[0] + "<br><br>" +
+     "Description: " + response.data.items[0].volumeInfo.description + "<br><br>" +
+     "Image: <br><br>" + "<img src='" + response.data.items[0].volumeInfo.imageLinks.thumbnail+ "'" + "<br><br><br><br>" + 
+     "Link: " + "<a href='" + response.data.items[0].volumeInfo.previewLink + "'>" + response.data.items[0].volumeInfo.previewLink + "</a>");
+    document.getElementById("content").innerHTML = myJSON;
   
-  axios.get("https://www.googleapis.com/books/v1/volumes?q=" + input.split(" ").join("+")+"&" + process.env.REACT_APP_APIKEY)
-  .then(function(response){
-  var myJSON = JSON.stringify("Title: " + response.data.items[0].volumeInfo.title + "<br><br>" +
-   "Authors: " + response.data.items[0].volumeInfo.authors[0] + "<br><br>" +
-   "Description: " + response.data.items[0].volumeInfo.description + "<br><br>" +
-   "Image: <br><br>" + "<img src='" + response.data.items[0].volumeInfo.imageLinks.thumbnail+ "'" + "<br><br><br><br>" + 
-   "Link: " + "<a href='" + response.data.items[0].volumeInfo.previewLink + "'>" + response.data.items[0].volumeInfo.previewLink + "</a>");
-  document.getElementById("content").innerHTML = myJSON;
+    document.getElementById('save').style.display = "block";
+    document.getElementById('savedmsg').style.display = "none";
+  
+    }).catch(err => console.log(err));
+  }
 
-  document.getElementById('save').style.display = "block";
-
-  }).catch(err => console.log(err));
-
-}
-
+//post function needs to be reworked.
 function save () {
-  // axios.post()
-  document.getElementById('savedmsg').style.display = "block";
+  axios.post("http://localhost:3000/saved", document.getElementById('content').value)
+  .then(function(response){
+    document.getElementById('savedcont').innerHTML = response; 
+    });
+    document.getElementById('savedmsg').style.display = "block";
+  };
 
-}
   return (
     <div>
       <div id="navbar">
