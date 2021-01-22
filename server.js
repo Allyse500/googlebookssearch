@@ -24,7 +24,7 @@ app.use(morgan('short'));
 
 const uri = encodeURI(process.env.MONGODB_URI);//passes or understands this line
 
-//console.log(encodeURIComponent(uri));
+//connect to mongoDB
 
 const client = new MongoClient(uri || "mongodb://localhost:27017/googlebookssearch",
  { useNewUrlParser: true, useUnifiedTopology: true });
@@ -33,6 +33,14 @@ client.connect(err => {
   // perform actions on the collection object
   console.log("Connected correctly to server");
   client.close();
+});
+
+const booksRouter = require('./route/books');
+
+app.use('/books', booksRouter);
+
+app.listen(PORT, () => {
+  console.log(`🌎 ==> API server now on port ${PORT}!`);
 });
 
 // Connect to the Mongo DB
@@ -69,7 +77,3 @@ client.connect(err => {
 // app.get("*", (req, res) => {
 //   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 // });
-
-app.listen(PORT, () => {
-  console.log(`🌎 ==> API server now on port ${PORT}!`);
-});
