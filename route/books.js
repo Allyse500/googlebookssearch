@@ -37,13 +37,14 @@ router.route('/:id').get((req,res)=>{
 
 router.route('/:id').delete((req,res) => {
     Book.findByIdAndDelete(req.params.id)
-    .then(()=> res.json('Exercise deleted.'))
+    .then(()=> res.json('Book deleted.'))
     .catch(err => res.status(400).json('Error: ' + err));
 });
 
 router.route('/update/:id').post((req,res) => {
     Book.findById(req.params.id)
     .then(book => {
+        book.username = req.body.username;
         book.title = req.body.title;
         book.author = req.body.author;
         book.description = req.body.description;
