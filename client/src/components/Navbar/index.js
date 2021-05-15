@@ -107,8 +107,8 @@ function save () {
       <div id ="dialogoverlay"></div>
       <div id= "dialogbox">
         <div>
-          <div id ="dialogboxhead"></div>
-          <div id ="dialogboxbody"></div>
+          <div id ="dialogboxhead" style = {{textAlign: "center"}}>About</div>
+          <div id ="dialogboxbody">Welcome to Google Books Search! On this page, you can search for any book title provided by Google. Login or sign-up to save your book selections to build your own collection.</div>
           <div id ="dialogboxfoot">
             <button onClick={close}>Close</button>
           </div>
