@@ -53,3 +53,19 @@ margin-bottom: 10px;
   transform: translate(60px, -20px);
   font-style: italic;
 }
+
+#saved2 {
+  transform: translate(100px, 5px);
+  border: white 5px double;
+  border-radius: 30px;
+}
+
+#about {
+  transform: translate(150px, 5px);
+  border: white 5px double;
+  border-radius: 30px;
+  text-align: center;
+  background-color: red;
+  color: white;
+  font-size: 18px;
+  }

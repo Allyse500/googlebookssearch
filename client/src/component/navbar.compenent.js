@@ -47,13 +47,13 @@ function save () {
               <Link className="navbar-brand" to="/" id= "title" style = {{color: "white", fontSize: "180%", textDecoration: "none"}}>
                 Google Books Search
               </Link>
-              {/* <Link
-                to="/saved" id = "saved"
+              <Link
+                to="/user" id = "saved"
                 className={window.location.pathname === "/saved" ? "nav-link active" : "nav-link"}
                 style = {{color: "white", fontSize: "130%", textDecoration: "none"}}
               >
                 Saved
-              </Link> */}
+              </Link>
 
               <div id = "form">
                 <form className="search">
@@ -71,16 +71,6 @@ function save () {
                 </form>
                 <button id = "searchbtn" onClick = {search}>Search</button> 
               </div>
-              <Link
-                to="/saved" id = "saved2"
-                className={window.location.pathname === "/saved" ? "nav-link active" : "nav-link"}
-                style = {{color: "white", fontSize: "130%", textDecoration: "none"}}
-              >
-              Log In/Sign Up
-              </Link>
-
-              <button id = "about">About</button>
-
             </ul>        
           </div>      
         </nav>
