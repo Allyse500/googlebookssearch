@@ -36,6 +36,18 @@ function save () {
     });
     document.getElementById('savedmsg').style.display = "block";
   };
+//===================CLOSE FUNCTION FOR DIALOG BOX====================================//
+  function close () {
+    document.getElementById('dialogbox').style.display = 'none';
+    document.getElementById('dialogoverlay').style.display = 'none';
+  }
+
+  //================ABOUT DIALOG BOX DISPLAY FUNCTION=================================//
+  function about () {
+    document.getElementById('dialogbox').style.display = 'block';
+    document.getElementById('dialogoverlay').style.display = 'block';
+  }
+
 
   return (
     <div>
@@ -79,7 +91,7 @@ function save () {
               Log In/Sign Up
               </Link>
 
-              <button id = "about">About</button>
+              <button id = "about" onClick ={about}>About</button>
 
             </ul>        
           </div>      
@@ -91,6 +103,19 @@ function save () {
       <br></br>
       <button id = "save" onClick = {save}>Save</button>
       <div id = "savedmsg">Saved!</div>
+{/* ABOUT DIALOG BOX============================================================= */}
+      <div id ="dialogoverlay"></div>
+      <div id= "dialogbox">
+        <div>
+          <div id ="dialogboxhead"></div>
+          <div id ="dialogboxbody"></div>
+          <div id ="dialogboxfoot">
+            <button onClick={close}>Close</button>
+          </div>
+        </div>
+      </div>
+
+
     </div>
   );
 }
