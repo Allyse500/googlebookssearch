@@ -61,7 +61,7 @@ margin-bottom: 10px;
 }
 
 #about {
-  transform: translate(150px, 5px);
+  transform: translate(70px, 5px);
   border: white 5px double;
   border-radius: 30px;
   text-align: center;
@@ -134,5 +134,82 @@ margin-bottom: 10px;
   }
 
   #aboutCB:hover {
+    background-color:rgb(35, 35, 35);
+  }
+
+  /*======================LOGIN DIALOG BOX===========================================*/
+   #login {
+    transform: translate(130px, 5px);
+    border: white 5px double;
+    border-radius: 30px;
+    text-align: center;
+    background-color: red;
+    color: white;
+    font-size: 18px;
+   }
+
+   #login:hover{
+    background-color: rgb(255, 55, 55);
+  }
+
+  #signin{
+    display:none;
+    background:rgb(0, 0, 0, .5);
+    width: 550px;
+    position: relative;
+    z-index:10;
+    border: 5px double rgb(80, 38, 22);
+    border-radius:7px;
+    margin-right: auto;
+    margin-left: auto;
+    transform: translateY(50%);
+  }
+  
+  /* #signin > div > #signinbody> form{
+    height: 100px;
+    position: relative;
+    z-index:10;
+  } */
+  
+  #signin > div > #signinbody> form > input{
+    border-radius: 5px;
+  }
+  
+  #signin > div { 
+    background-color: rgb(0, 128, 0, .5);
+    margin: 8px;
+  }
+  
+  #signin > div > #signinhead {
+    /* background: rgb(0, 128, 0, .5); */
+    text-align: center;
+    font-size:30px;
+    font-weight:bold;
+    font-style:italic;
+    padding: 10px; 
+    color: black;
+  }
+  
+  #signin > div > #signinbody{
+    /* background:rgb(0, 128, 0, .5); */
+    text-align: center;
+    padding: 20px;
+    color: black;
+  }
+  
+  #signin > div > #signinfoot{
+    /* background:rgb(0, 128, 0, .5); */
+    padding: 10px;
+    text-align: right;
+  }
+
+  #loginclose, #loginsubmit{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: white 1px solid;
+    border-radius: 5px;
+  }
+
+  #loginclose:hover, #loginsubmit:hover {
     background-color:rgb(35, 35, 35);
   }

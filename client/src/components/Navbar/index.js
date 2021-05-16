@@ -42,11 +42,24 @@ function save () {
     document.getElementById('dialogoverlay').style.display = 'none';
   }
 
-  //================ABOUT DIALOG BOX DISPLAY FUNCTION=================================//
+//================ABOUT DIALOG BOX DISPLAY FUNCTION=================================//
   function about () {
     document.getElementById('dialogbox').style.display = 'block';
     document.getElementById('dialogoverlay').style.display = 'block';
   }
+
+//=================CANCEL FUNCTION FOR SIGN-IN AND REGISTER BOXES=======================//
+  function cancel () {
+    document.getElementById('signin').style.display = 'none';
+    document.getElementById('dialogoverlay').style.display = 'none';
+    document.getElementById('searchfield').style.display = 'flex';
+  }
+
+//==============BEGIN LOGIN FUNCTION FOR SIGN-IN=========================================//
+  function beginlogin () {
+    document.getElementById('signin').style.display = 'block';
+  }
+
 
 
   return (
@@ -83,15 +96,18 @@ function save () {
                 </form>
                 <button id = "searchbtn" onClick = {search}>Search</button> 
               </div>
+
+              <button id = "about" onClick ={about}>About</button>
+
               <Link
                 to="/saved" id = "saved2"
                 className={window.location.pathname === "/saved" ? "nav-link active" : "nav-link"}
                 style = {{color: "white", fontSize: "130%", textDecoration: "none"}}
               >
-              Log In/Sign Up
+              Sign Up
               </Link>
 
-              <button id = "about" onClick ={about}>About</button>
+              <button id = "login" onClick = {beginlogin}>Login</button>
 
             </ul>        
           </div>      
@@ -114,6 +130,37 @@ function save () {
           </div>
         </div>
       </div>
+{/* LOGIN DIALOG BOX============================================================= */}
+<div className="Login" id= "signin">
+      <div>
+        <div id ="signinhead">Login</div>
+          <div id ="signinbody">
+
+      <form> {/*Changed Form--> form*/}
+        <div size="lg" controlId="email">
+          <label>Email</label>
+          <input
+            id = "sie"
+            type="text"
+            style={{borderRadius: "5px", transform: "trasnlateY(-15%)"}}             
+          />
+        </div>
+        <div size="lg" controlId="password">
+          <label>Password</label>
+          <input
+            id = "sip"
+            type="text"
+            style={{borderRadius: "5px", transform: "trasnlateY(-15%)"}}
+          />
+        </div>
+        <button id ="loginsubmit" block size="lg" type="submit" style = {{transform: "translate(200px, 12px)"}}>
+          Login
+        </button>
+        <button id = "loginclose" onClick={cancel} style = {{transform: "translate(210px, 12px)"}}>Close</button>
+      </form>
+      </div>
+    </div>
+    </div>
 
 
     </div>
