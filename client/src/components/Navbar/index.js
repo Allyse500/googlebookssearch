@@ -15,11 +15,13 @@ function Navbar() {
     
     axios.get("https://www.googleapis.com/books/v1/volumes?q=" + input.split(" ").join("+")+"&" + process.env.REACT_APP_APIKEY)
     .then(function(response){
-    var myJSON = JSON.stringify("Title: " + response.data.items[0].volumeInfo.title + "<br><br>" +
-     "Authors: " + response.data.items[0].volumeInfo.authors[0] + "<br><br>" +
-     "Description: " + response.data.items[0].volumeInfo.description + "<br><br>" +
-     "Image: <br><br>" + "<img src='" + response.data.items[0].volumeInfo.imageLinks.thumbnail+ "'" + "<br><br><br><br>" + 
-     "Link: " + "<a href='" + response.data.items[0].volumeInfo.previewLink + "'>" + response.data.items[0].volumeInfo.previewLink + "</a>");
+    var myJSON = JSON.stringify(
+    "<div id = 'rsp'><img id = 'img' class ='align' src='" + response.data.items[0].volumeInfo.imageLinks.thumbnail+ "'"  + ">" +
+    "<div id = 'info'><h1>" + response.data.items[0].volumeInfo.title + "</h1>" +
+     "<div class = 'align' id ='info2'><div><h3>Author(s):</h3> " + response.data.items[0].volumeInfo.authors[0] + "</div><br>" +
+     "<div><h3 id = 'description'>Description:</h3> " + response.data.items[0].volumeInfo.description + "</div>" +
+     "<br>" + "<div><h3>URL: </h3>" + "<a id='link' href='" + response.data.items[0].volumeInfo.previewLink + "'></div>" 
+     + response.data.items[0].volumeInfo.previewLink + "</a>" + "</div></div></div>");
     document.getElementById("content").innerHTML = myJSON;
   
     document.getElementById('save').style.display = "block";
@@ -56,7 +58,9 @@ function save () {
   }
 
 //==============BEGIN LOGIN FUNCTION FOR SIGN-IN=========================================//
-  function beginlogin () {
+  function beginlogin () {//need to enable dialog overlay
+    document.getElementById('dialogoverlay').style.display ="block";
+    document.getElementById('dialogoverlay').style.height ="auto";
     document.getElementById('signin').style.display = 'block';
   }
 
