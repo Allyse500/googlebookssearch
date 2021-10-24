@@ -20,6 +20,62 @@ transform: translateY(30%);
 margin-bottom: 10px;
 }
 
+.align:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+#info {
+  text-align: left;
+  /* clear:left; */
+  float: left;
+  width: 50%;
+  padding: 5%;
+  background-color: rgb(255,255,255,.85);
+  border-radius: 5px;
+  margin-bottom: 2%;
+}
+
+/* #info::after {
+  content: "";
+  clear: both;
+  display: table;
+} */
+
+h1 {
+  color: red;
+  /* font-size: 250%; */
+}
+
+#description {
+  width: 30%;
+}
+
+/* .rsp::after {
+  content: "";
+  clear: both;
+  display: table;
+} */
+
+/* #link{
+  width: 10%;
+} */
+
+#rsp {
+  /* background-color: rgb(255,255,255, .85); */
+  border-radius: 5px;
+  font-size: 120%;
+  padding: 5%;
+}
+
+#img {
+  height: 35%;
+  width: 35%;
+  float: left;
+  margin-right: 1%;
+}
+
 #navbar {
   background-color: red;
   color: white;
@@ -53,3 +109,163 @@ margin-bottom: 10px;
   transform: translate(60px, -20px);
   font-style: italic;
 }
+
+#saved2 {
+  transform: translate(100px, 5px);
+  border: white 5px double;
+  border-radius: 30px;
+}
+
+#about {
+  transform: translate(70px, 5px);
+  border: white 5px double;
+  border-radius: 30px;
+  text-align: center;
+  background-color: red;
+  color: white;
+  font-size: 18px;
+  }
+
+  #about:hover{
+    background-color: rgb(255, 55, 55);
+  }
+
+  /*ABOUT DIALOG BOX=======================================================*/
+  #dialogoverlay{
+    display:none;
+    /* opacity:0.8; */
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    /* background: #FFF; */
+    width: 100%;
+    z-index: 10;
+  }
+  
+  #dialogbox{
+    display:none;
+    background:rgb(0, 0, 0, .5);
+    border-radius:7px;
+    width: 550px;
+    position: relative;
+    z-index:10;
+    border: 5px double white;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translateY(50%);
+  }
+  
+  #dialogbox > div { 
+    background-color: rgb(0, 0, 128, .5);
+    margin: 8px;
+  }
+  
+  #dialogbox > div > #dialogboxhead {
+    /* background: rgb(0, 128, 0, .5);  */
+    font-size:30px;
+    padding: 10px; 
+    color:white;
+    transform: translateY(10px)
+  
+  }
+  
+  #dialogbox > div > #dialogboxbody{
+    /* background:rgb(0, 128, 0, .5); */
+    padding: 20px;
+    color: white;
+    transform: translateY(10px)
+  }
+  
+  #dialogbox > div > #dialogboxfoot{
+    /* background:rgb(0, 128, 0, .5); */
+    padding: 10px;
+    text-align: right;
+  }
+
+  #aboutCB {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: white 1px solid;
+    border-radius: 5px;
+  }
+
+  #aboutCB:hover {
+    background-color:rgb(35, 35, 35);
+  }
+
+  /*======================LOGIN DIALOG BOX===========================================*/
+   #login {
+    transform: translate(130px, 5px);
+    border: white 5px double;
+    border-radius: 30px;
+    text-align: center;
+    background-color: red;
+    color: white;
+    font-size: 18px;
+   }
+
+   #login:hover{
+    background-color: rgb(255, 55, 55);
+  }
+
+  #signin{
+    display:none;
+    background:rgb(0, 0, 0, .5);
+    width: 550px;
+    position: relative;
+    z-index:10;
+    border: 5px double rgb(80, 38, 22);
+    border-radius:7px;
+    margin-right: auto;
+    margin-left: auto;
+    transform: translateY(50%);
+  }
+  
+  /* #signin > div > #signinbody> form{
+    height: 100px;
+    position: relative;
+    z-index:10;
+  } */
+  
+  #signin > div > #signinbody> form > input{
+    border-radius: 5px;
+  }
+  
+  #signin > div { 
+    background-color: rgb(0, 128, 0, .5);
+    margin: 8px;
+  }
+  
+  #signin > div > #signinhead {
+    /* background: rgb(0, 128, 0, .5); */
+    text-align: center;
+    font-size:30px;
+    font-weight:bold;
+    font-style:italic;
+    padding: 10px; 
+    color: black;
+  }
+  
+  #signin > div > #signinbody{
+    /* background:rgb(0, 128, 0, .5); */
+    text-align: center;
+    padding: 20px;
+    color: black;
+  }
+  
+  #signin > div > #signinfoot{
+    /* background:rgb(0, 128, 0, .5); */
+    padding: 10px;
+    text-align: right;
+  }
+
+  #loginclose, #loginsubmit{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: white 1px solid;
+    border-radius: 5px;
+  }
+
+  #loginclose:hover, #loginsubmit:hover {
+    background-color:rgb(35, 35, 35);
+  }
