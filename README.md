@@ -1,4 +1,5 @@
-# Google Books Search
+###Google Books Search###
+
 
 ## Description
 
@@ -48,4 +49,4 @@ Allyse D. Johnson (me, myself and I)
 
 ## License
 
-One is free to clone down this game from github to make it their own.
+One is free to clone down this work from github to make it their own.
