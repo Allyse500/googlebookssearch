@@ -8,6 +8,9 @@ require('dotenv').config();
 const app = express();
 const PORT = 3000 || process.env.PORT;
 
+if (process.env.NODE_ENV === 'production'){
+  app.use(express.static('client/build'));
+}
 
 // Define middleware here
 app.use(express.json());
