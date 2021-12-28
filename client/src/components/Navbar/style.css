@@ -1,14 +1,32 @@
-nav.navbar.navbar-default {
-  margin-bottom: 0;
+#searchResultGrid{
+  display:grid;
+  grid-template-columns: 90vw 2vw;
 }
 
-.navbar-nav{
-  display: grid;
-  grid-template-columns: repeat(10, auto);
-  padding-bottom: 10px;
+
+#closeRsp{
+  display:none;
+  border: white 2px double;
+  border-radius: 4px;
   text-align: center;
-  margin-top: 0;
+  background-color: black;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  position: absolute;
+  z-index: 2;
+  padding-left: 4px;
+  padding-right: 4px;
+  width: fit-content;
+  height: 4.2vh;
+  margin-left: 85vw;
+  margin-top: 14vh;
 }
+
+#closeRsp:hover{
+background-color: rgb(40, 40, 40);
+}
+
 #saved:hover{
   background-color: rgb(255, 75, 75);
   border-radius: 4px;
@@ -43,6 +61,7 @@ margin-bottom: 10px;
   display: table;
 } */
 
+
 h1 {
   color: red;
   /* font-size: 250%; */
@@ -76,22 +95,6 @@ h1 {
   margin-right: 1%;
 }
 
-#navbar {
-  background-color: red;
-  color: white;
-}
-
-#title {
-  transform: translateY(12%)
-}
-
-#form {
-  transform: translate(0%, 30%)
-}
-
-#searchbtn {
-  transform: translate(310%, -108%)
-}
 
 #content {
   text-align: center;
@@ -110,162 +113,446 @@ h1 {
   font-style: italic;
 }
 
-#saved2 {
-  transform: translate(100px, 5px);
-  border: white 5px double;
-  border-radius: 30px;
+/*===============================NAV BAR=========================================*/
+
+#navbar {
+  background-color: rgb(255, 0, 0);
+  color: white;
+  display: grid;
+  /* grid-template-columns:30% 50% 20%; */
+  grid-template-columns:40vw 40vw 20vw;
+  height: 8vh;
+  padding-top: 2.5vh;
 }
 
-#about {
-  transform: translate(70px, 5px);
-  border: white 5px double;
+#title {
+  transform: translateY(-10%);
+}
+
+#term{
+  height: 4vh;
+}
+
+/* #form {
+ display:grid;
+ grid-template-columns: 20% 50% 20%;
+margin-top: .5vh;
+} */
+
+#form {
+  display:grid;
+  grid-template-columns: 50% 20%;
+ margin-top: .5vh;
+ }
+
+#searchbtn {
+  border: black 1px solid;
+  /* border-radius: 10px; */
+  text-align: center;
+  background-color: black;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  padding-top: 2px;
+  /* padding-bottom: .5px; */
+  padding-left: 4px;
+  padding-right: 4px;
+  width: fit-content;
+  height: 4.2vh;
+  /* margin-top: .5vh; */
+}
+
+#searchbtn:hover{
+  background-color: rgb(40, 40, 40);
+  border-color: rgb(40, 40, 40);
+}
+
+ #about, #signup, #login {
+  border: white 4px double;
   border-radius: 30px;
   text-align: center;
-  background-color: red;
+  background-color: black;
   color: white;
   font-size: 18px;
+  cursor: pointer;
+  width: fit-content;
+  height: fit-content;
+}
+
+  #about:hover, #signup:hover, #login:hover{
+    background-color: rgb(40, 40, 40);
   }
 
-  #about:hover{
-    background-color: rgb(255, 55, 55);
+  #headerBtnGrid{
+    display: grid;
+    grid-template-columns: 5vw 7vw 5vw;
+    grid-gap: 0 1vw;
+    /* margin-top: 2.5vh; */
+    /* margin-left: 25vw; */
   }
 
-  /*ABOUT DIALOG BOX=======================================================*/
-  #dialogoverlay{
+  .dropbtn {
+   display:none;
+  }
+
+  .dropdown-content {
+    display: none;
+  }
+
+  @media only screen and (max-width: 1270px) {
+
+    #headerBtnGrid {
     display:none;
-    /* opacity:0.8; */
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    /* background: #FFF; */
-    width: 100%;
-    z-index: 10;
-  }
-  
-  #dialogbox{
-    display:none;
-    background:rgb(0, 0, 0, .5);
-    border-radius:7px;
-    width: 550px;
-    position: relative;
-    z-index:10;
-    border: 5px double white;
-    margin-left: auto;
-    margin-right: auto;
-    transform: translateY(50%);
-  }
-  
-  #dialogbox > div { 
-    background-color: rgb(0, 0, 128, .5);
-    margin: 8px;
-  }
-  
-  #dialogbox > div > #dialogboxhead {
-    /* background: rgb(0, 128, 0, .5);  */
-    font-size:30px;
-    padding: 10px; 
-    color:white;
-    transform: translateY(10px)
-  
-  }
-  
-  #dialogbox > div > #dialogboxbody{
-    /* background:rgb(0, 128, 0, .5); */
-    padding: 20px;
-    color: white;
-    transform: translateY(10px)
-  }
-  
-  #dialogbox > div > #dialogboxfoot{
-    /* background:rgb(0, 128, 0, .5); */
-    padding: 10px;
-    text-align: right;
   }
 
-  #aboutCB {
-    background-color: rgb(0, 0, 0);
-    color: white;
-    border: white 1px solid;
-    border-radius: 5px;
-  }
-
-  #aboutCB:hover {
-    background-color:rgb(35, 35, 35);
-  }
-
-  /*======================LOGIN DIALOG BOX===========================================*/
-   #login {
-    transform: translate(130px, 5px);
-    border: white 5px double;
-    border-radius: 30px;
-    text-align: center;
-    background-color: red;
-    color: white;
-    font-size: 18px;
+  #form {
+    display:grid;
+    grid-template-columns: 50% 18% 20%;
+    margin-top: .5vh;
    }
-
-   #login:hover{
-    background-color: rgb(255, 55, 55);
-  }
-
-  #signin{
-    display:none;
-    background:rgb(0, 0, 0, .5);
-    width: 550px;
-    position: relative;
-    z-index:10;
-    border: 5px double rgb(80, 38, 22);
-    border-radius:7px;
-    margin-right: auto;
-    margin-left: auto;
-    transform: translateY(50%);
+  .dropbtn {
+    color: white;
+    display:block;
+    font-size: 5vh;
+    width: fit-content;
+    font-family: Arial, Helvetica, sans-serif;
+    border: solid white 1px;
+    cursor: pointer;
+    background-color: black;
+    border-radius: 10px;
+    padding-left:10px;
+    padding-right:10px;
+    margin-top: -.8vh;
   }
   
-  /* #signin > div > #signinbody> form{
-    height: 100px;
-    position: relative;
-    z-index:10;
-  } */
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: rgb(60, 60, 60);
+    color: white;
+  }
   
-  #signin > div > #signinbody> form > input{
+  .dropdown {
+    /* position: relative; */
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .navOpt{
+  padding: 4%;
+  text-align:center;
+  font-family: Arial, Helvetica, sans-serif;
+  background: black;
+  color: white;
+  cursor: pointer;
+  }
+  
+  .navOpt:hover{
+  background-color: rgb(60, 60, 60);
+  }
+  
+  
+  .show {display: block;}
+}/*end of media 1270px*/
+/*==========================CSS FOR NAV AT X < 995px=====================*/
+@media only screen and (max-width: 995px) {
+
+.abrev{
+display: none;
+}
+
+#navbar {
+  background-color: rgb(255, 0, 0);
+  color: white;
+  display: grid;
+  grid-template-columns:20vw 70vw;
+  height: 8vh;
+  padding-top: 2.5vh;
+}
+
+#form {
+  display:grid;
+  grid-template-columns: 50% 18% 20%;
+  margin-top: .5vh;
+ }
+
+}
+
+
+/*=========================ABOUT PROMPT BOX===============================*/
+#aboutModal{
+  display: none;
+  position: fixed; 
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+#aboutContainer{
+ margin-left: auto;
+ margin-right: auto;
+ width: 400px;
+ height: fit-content;
+ background-color: rgba(0, 0, 0, .5);
+ border: 5px double rgb(80, 38, 22);
+ border-radius:7px;
+ padding: .75%;
+}
+
+#aboutSecondaryContainer{
+background-color: rgba(107, 142, 35, .75);
+margin-left: auto;
+margin-right: auto;
+padding: 2%;
+}
+
+#aboutTitle{
+font-style: italic;
+font-weight: bold;
+font-size: 200%;
+font-family: Arial, Helvetica, sans-serif; 
+text-align: center;
+color: white;
+}
+
+ #aboutCloseButton{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 85%;
+	text-align: center;
+    border: white 1px solid;
     border-radius: 5px;
-  }
-  
-  #signin > div { 
-    background-color: rgb(0, 128, 0, .5);
-    margin: 8px;
-  }
-  
-  #signin > div > #signinhead {
-    /* background: rgb(0, 128, 0, .5); */
-    text-align: center;
-    font-size:30px;
-    font-weight:bold;
-    font-style:italic;
-    padding: 10px; 
-    color: black;
-  }
-  
-  #signin > div > #signinbody{
-    /* background:rgb(0, 128, 0, .5); */
-    text-align: center;
-    padding: 20px;
-    color: black;
-  }
-  
-  #signin > div > #signinfoot{
-    /* background:rgb(0, 128, 0, .5); */
-    padding: 10px;
-    text-align: right;
+    cursor: pointer;
+    padding-top: 1px;
+    margin-left: 85%;
   }
 
-  #loginclose, #loginsubmit{
+#aboutCloseButton:hover {
+    background-color:rgb(60, 60, 60);
+  }
+  
+#aboutContents{
+padding-left: 5%;
+padding-right: 5%;
+margin-top: 5%;
+font-family: Arial, Helvetica, sans-serif;
+color: white;
+}
+
+/*=========================SIGN UP PROMPT BOX===============================*/
+#signupModal{
+  display: none;
+  position: fixed; 
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+#signupFormContainer{
+ margin-left: auto;
+ margin-right: auto;
+ width: 400px;
+ height: fit-content;
+ background-color: rgba(0, 0, 0, .5);
+ border: 5px double rgb(80, 38, 22);
+ border-radius:7px;
+ padding: .75%;
+}
+
+#signupFormSecondaryContainer{
+background-color: rgba(107, 142, 35, .75);
+margin-left: auto;
+margin-right: auto;
+padding: 2%;
+}
+
+#signupFormTitle{
+font-style: italic;
+font-weight: bold;
+font-size: 200%;
+font-family: Arial, Helvetica, sans-serif; 
+text-align: center;
+color: white;
+}
+
+.formInput{
+    border-radius: 5px;
+    border: 1px solid black;
+    margin-bottom: 3%;
+}
+
+#signupBtnsGrid{
+display: grid;
+grid-template-columns: 30% 30%;
+grid-gap: 0% 5%;
+width: 200px;
+margin-left: 66%;
+}
+
+#signupSubmitBtn{
     background-color: rgb(0, 0, 0);
     color: white;
     border: white 1px solid;
     border-radius: 5px;
+    cursor: pointer;
+    /*margin-left: 85%;*/
+  }
+  
+ #signupCloseButton{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 85%;
+	text-align: center;
+    border: white 1px solid;
+    border-radius: 5px;
+    cursor: pointer;
+    padding-top: 1px;
+    /*margin-left: 85%;*/
   }
 
-  #loginclose:hover, #loginsubmit:hover {
-    background-color:rgb(35, 35, 35);
+#signupSubmitBtn:hover, #signupCloseButton:hover {
+    background-color:rgb(60, 60, 60);
+  }
+  
+#signupInputContents{
+margin-left: 17.5%;
+margin-top: 5%;
+}
+
+.signupFormLabel{
+font-family: Arial, Helvetica, sans-serif;
+color: orange;
+font-weight: bold;  
+}
+
+#signupPasswordBlock{
+margin-left: .5%;
+}
+
+  /*=========================LOGIN PROMPT BOX===============================*/
+#loginModal{
+  display: none;
+  position: fixed; 
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+#loginFormContainer{
+ margin-left: auto;
+ margin-right: auto;
+ width: 400px;
+ height: fit-content;
+ background-color: rgba(0, 0, 0, .5);
+ border: 5px double rgb(80, 38, 22);
+ border-radius:7px;
+ padding: .75%;
+}
+
+#loginFormSecondaryContainer{
+background-color: rgba(107, 142, 35, .75);
+margin-left: auto;
+margin-right: auto;
+padding: 2%;
+}
+
+#loginFormTitle{
+font-style: italic;
+font-weight: bold;
+font-size: 200%;
+font-family: Arial, Helvetica, sans-serif; 
+text-align: center;
+color: white;
+}
+
+.formInput{
+    border-radius: 5px;
+    border: 1px solid black;
+    margin-bottom: 3%;
+}
+
+#loginBtnsGrid{
+display: grid;
+grid-template-columns: 30% 30%;
+grid-gap: 0% 5%;
+width: 200px;
+margin-left: 66%;
+}
+
+#loginSubmitBtn{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: white 1px solid;
+    border-radius: 5px;
+    cursor: pointer;
+    /*margin-left: 85%;*/
+  }
+  
+ #loginCloseButton{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 85%;
+	text-align: center;
+    border: white 1px solid;
+    border-radius: 5px;
+    cursor: pointer;
+    padding-top: 1px;
+    /*margin-left: 85%;*/
+  }
+
+#loginSubmitBtn:hover, #loginCloseButton:hover {
+    background-color:rgb(60, 60, 60);
+  }
+  
+#loginInputContents{
+margin-left: 17.5%;
+margin-top: 5%;
+}
+
+.loginFormLabel{
+font-family: Arial, Helvetica, sans-serif;
+color: orange;
+font-weight: bold; 
+}
+
+#loginPasswordBlock{
+margin-left: .5%;
+}
+  @media only screen and (max-width: 1270px) {
+    #dialogbox{
+      display:none;
+      background:rgb(0, 0, 0, .5);
+      border-radius:7px;
+      width: 70vw;
+      position: relative;
+      z-index:10;
+      border: 5px double rgb(80, 38, 22);
+      margin-left: auto;
+      margin-right: auto;
+      transform: translateY(25%);
+    }
   }
