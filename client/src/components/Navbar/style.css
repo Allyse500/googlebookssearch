@@ -284,7 +284,30 @@ display: none;
 
 }
 
+/*==========================CSS FOR NAV AT X < 800px=====================*/
+@media only screen and (max-width: 995px) {
 
+  .abrev{
+  display: none;
+  }
+  
+  #navbar {
+    background-color: rgb(255, 0, 0);
+    color: white;
+    display: grid;
+    grid-template-columns:20vw 70vw;
+    height: 8vh;
+    padding-top: 2.5vh;
+  }
+  
+  #form {
+    display:grid;
+    grid-template-columns: 50% 25% 20%;
+    margin-top: .5vh;
+   }
+  
+  }
+    
 /*=========================ABOUT PROMPT BOX===============================*/
 #aboutModal{
   display: none;
