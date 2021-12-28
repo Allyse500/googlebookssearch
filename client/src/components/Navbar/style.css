@@ -126,11 +126,12 @@ h1 {
 }
 
 #title {
-  transform: translateY(-10%);
+  transform: translateY(-20%);
+  font-size:180%;
 }
 
 #term{
-  height: 4vh;
+  height: 17.5px;
 }
 
 /* #form {
@@ -143,6 +144,7 @@ margin-top: .5vh;
   display:grid;
   grid-template-columns: 50% 20%;
  margin-top: .5vh;
+ height: 5px;
  }
 
 #searchbtn {
@@ -152,13 +154,15 @@ margin-top: .5vh;
   background-color: black;
   color: white;
   font-size: 15px;
+  /* font-size: 3vh; */
   cursor: pointer;
-  padding-top: 2px;
+  /* padding-top: 2px; */
   /* padding-bottom: .5px; */
   padding-left: 4px;
   padding-right: 4px;
   width: fit-content;
-  height: 4.2vh;
+  height: 22px;
+  /* height: 4.2vh; */
   /* margin-top: .5vh; */
 }
 
@@ -213,7 +217,8 @@ margin-top: .5vh;
   .dropbtn {
     color: white;
     display:block;
-    font-size: 5vh;
+    /* font-size: 5vh; */
+    font-size: 22px;
     width: fit-content;
     font-family: Arial, Helvetica, sans-serif;
     border: solid white 1px;
@@ -260,8 +265,8 @@ margin-top: .5vh;
   
   .show {display: block;}
 }/*end of media 1270px*/
-/*==========================CSS FOR NAV AT X < 995px=====================*/
-@media only screen and (max-width: 800px) {
+/*==========================CSS FOR NAV AT X < 800px=====================*/
+@media only screen and (max-width: 995px) {
 
 .abrev{
 display: none;
@@ -282,9 +287,53 @@ display: none;
   margin-top: .5vh;
  }
 
+
+ #aboutContainer{
+  margin-left: auto;
+  margin-right: auto;
+  width: 50vw;
+  height: fit-content;
+  background-color: rgba(0, 0, 0, .5);
+  border: 5px double rgb(80, 38, 22);
+  border-radius:7px;
+  padding: .75%;
+ }
+
+ #aboutTitle{
+  font-style: italic;
+  font-weight: bold;
+  font-size: 8vh;
+  font-family: Arial, Helvetica, sans-serif; 
+  text-align: center;
+  color: white;
+  }
+  
+   #aboutCloseButton{
+      background-color: rgb(0, 0, 0);
+      color: white;
+      font-family: Arial, Helvetica, sans-serif; 
+      font-size: 1vh;
+    text-align: center;
+      border: white 1px solid;
+      border-radius: 5px;
+      cursor: pointer;
+      padding-top: 1px;
+      margin-left: 85%;
+    }
+    
+  #aboutContents{
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-top: 5%;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-size:4vh;
+  }
+  
+
 }
 
-/*==========================CSS FOR NAV AT X < 800px=====================*/
+/*==========================CSS FOR NAV AT X < 500px=====================*/
 @media only screen and (max-width: 500px) {
 
   .abrev{
@@ -296,7 +345,8 @@ display: none;
     color: white;
     display: grid;
     grid-template-columns:20vw 70vw;
-    height: 8vh;
+    /* height: 8vh; */
+    height: 35px;
     padding-top: 2.5vh;
   }
   
