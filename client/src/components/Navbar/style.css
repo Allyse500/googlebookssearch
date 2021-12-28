@@ -261,7 +261,7 @@ margin-top: .5vh;
   .show {display: block;}
 }/*end of media 1270px*/
 /*==========================CSS FOR NAV AT X < 995px=====================*/
-@media only screen and (max-width: 995px) {
+@media only screen and (max-width: 800px) {
 
 .abrev{
 display: none;
@@ -285,7 +285,7 @@ display: none;
 }
 
 /*==========================CSS FOR NAV AT X < 800px=====================*/
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 500px) {
 
   .abrev{
   display: none;
@@ -307,13 +307,13 @@ display: none;
    }
 
    .dropdown-content {
-    display: none;
+    /* display: none; */
     position: absolute;
     min-width: 160px;
     overflow: auto;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-    margin-right: 10vw;
+    margin-left: -25vw;
   }
   
   }
