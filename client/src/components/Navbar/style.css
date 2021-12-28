@@ -285,7 +285,7 @@ display: none;
 }
 
 /*==========================CSS FOR NAV AT X < 800px=====================*/
-@media only screen and (max-width: 995px) {
+@media only screen and (max-width: 800px) {
 
   .abrev{
   display: none;
@@ -305,6 +305,16 @@ display: none;
     grid-template-columns: 50% 25% 20%;
     margin-top: .5vh;
    }
+
+   .dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin-right: 10vw;
+  }
   
   }
     
