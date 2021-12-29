@@ -612,7 +612,7 @@ display: none;
 #aboutContainer{
   margin-left: auto;
   margin-right: auto;
-  width: 60vw;
+  width: 90vw;
   height: fit-content;
   background-color: rgba(0, 0, 0, .5);
   border: 5px double rgb(80, 38, 22);
