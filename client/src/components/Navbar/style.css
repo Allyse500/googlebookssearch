@@ -677,8 +677,28 @@ display: none;
       grid-template-columns: 30% 30%;
       grid-gap: 0% 5%;
       width: 200px;
-      margin-left: 50%;
+      margin-left: 60%;
       }
+  /*----------------SIGN UP PROMPT----------------*/
+  #signupFormContainer{
+    margin-left: auto;
+    margin-right: auto;
+    width: 90vw;
+    height: fit-content;
+    background-color: rgba(0, 0, 0, .5);
+    border: 5px double rgb(80, 38, 22);
+    border-radius:7px;
+    padding: .75%;
+   }
+
+   #signupBtnsGrid{
+    display: grid;
+    grid-template-columns: 30% 30%;
+    grid-gap: 0% 5%;
+    width: 200px;
+    margin-left: 60%;
+    }
+   
 
     /* #loginFormSecondaryContainer{
     background-color: rgba(107, 142, 35, .75);
