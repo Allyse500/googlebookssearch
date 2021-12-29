@@ -5,7 +5,7 @@
 
 This is an application that is intended to allow users to prepare an account, seach for books using the google books api and save those books for later view. Its server, User Interface and functions are written in JSX, React, Javascript, CSS and HTML. The database used is a Mongo Database.
 
-This project is still under development. Currently this app has a user interface to enable login, a functional server-database system and viable api call for the books being searched. To further develop these so they'd become more connected would require for me to introduce state into some components. Also, I think it could use a bit of refactoring to simplify the code's look, specifically by further compartmentalizing the larger components.
+This project is still under development. Currently this app has a user interface to enable login, a functional server-database system and viable api call for the books being searched. To further develop these so they'd become more connected would require for me to introduce state into some components. The CSS of this project, however, is mobile-phone-friendly.
 
 ## Installation
 
@@ -43,10 +43,20 @@ Heroku deployed link: https://hidden-savannah-06355.herokuapp.com/
     4. Push to heroku
     Note: On this step, it is best to refer to the heroku tutorial to make your first Heroku deployment Link and push: https://devcenter.heroku.com/articles/getting-started-with-nodejs.
 13. Push all updates to github account and heroku to update main code and posted website respectively.
+
+## Functions for Smaller Screen Size
+When the screen reaches 1270px, the three buttons listed on the far right of the home or user page are hidden and alternative buttons are displayed from a drop down button grouped with the display of the search bar. Aside from the physical look, the function of each button is the same as the former buttons they are titled after (About, Sign Up, Log In, Account, My Recipes, and Log Out).
 ## Credits
 
-Allyse D. Johnson (me, myself and I)
+I've searched many different pages for trouble shooting. Below are the main sources I used to get started for what I did not know.
 
+From previous projects, I initially used this video to help me get a better understanding for MongoDB and Express:
+https://www.youtube.com/watch?v=7CqJlxBYj-M&t=5752s
+
+From previous projects, I initially learned how to connect the application to Heroku using this video:
+https://www.youtube.com/watch?v=5PaUiPyBDJY&t=484s
+
+I used w3schools to find how to prepare the drop down button.
 ## License
 
 One is free to clone down this work from github to make it their own.
