@@ -595,7 +595,7 @@ display: none;
     z-index: 1;
     margin-left: -25vw;
   }
-
+/*---------------ABOUT PROMPT BOX----------------*/
   #aboutModal{
     display: none;
     position: fixed; 
@@ -658,5 +658,84 @@ display: none;
         padding-top: 1px;
         margin-left: 85%;
       }
+
+    /*-----------------LOGIN PROMPT BOX-----------------*/
+
+    #loginFormContainer{
+    margin-left: auto;
+    margin-right: auto;
+    width: 90vw;
+    height: fit-content;
+    background-color: rgba(0, 0, 0, .5);
+    border: 5px double rgb(80, 38, 22);
+    border-radius:7px;
+    padding: .75%;
+    }
+
+    /* #loginFormSecondaryContainer{
+    background-color: rgba(107, 142, 35, .75);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2%;
+    }
+
+    #loginFormTitle{
+    font-style: italic;
+    font-weight: bold;
+    font-size: 200%;
+    font-family: Arial, Helvetica, sans-serif; 
+    text-align: center;
+    color: white;
+    }
+
+    .formInput{
+        border-radius: 5px;
+        border: 1px solid black;
+        margin-bottom: 3%;
+    }
+
+    #loginBtnsGrid{
+    display: grid;
+    grid-template-columns: 30% 30%;
+    grid-gap: 0% 5%;
+    width: 200px;
+    margin-left: 66%;
+    }
+
+    #loginSubmitBtn{
+        background-color: rgb(0, 0, 0);
+        color: white;
+        border: white 1px solid;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      
+    #loginCloseButton{
+        background-color: rgb(0, 0, 0);
+        color: white;
+        font-family: Arial, Helvetica, sans-serif; 
+        font-size: 85%;
+      text-align: center;
+        border: white 1px solid;
+        border-radius: 5px;
+        cursor: pointer;
+        padding-top: 1px;
+      }
+      
+    #loginInputContents{
+    margin-left: 17.5%;
+    margin-top: 5%;
+    }
+
+    .loginFormLabel{
+    font-family: Arial, Helvetica, sans-serif;
+    color: orange;
+    font-weight: bold; 
+    }
+
+    #loginPasswordBlock{
+    margin-left: .5%;
+    } */
+
   
   }/*end of media 500 max-width*/
