@@ -45,7 +45,7 @@ Heroku deployed link: https://hidden-savannah-06355.herokuapp.com/
 13. Push all updates to github account and heroku to update main code and posted website respectively.
 
 ## Functions for Smaller Screen Size
-When the screen reaches 1270px, the three buttons listed on the far right of the home or user page are hidden and alternative buttons are displayed from a drop down button grouped with the display of the search bar. Aside from the physical look, the function of each button is the same as the former buttons they are titled after (About, Sign Up, Log In, Account, My Recipes, and Log Out).
+When the screen reaches 1270px, the three buttons listed on the far right of the home or user page are hidden and alternative buttons are displayed from a drop down button grouped with the display of the search bar. Aside from the physical look, the function of each button is the same as the former buttons they are titled after (About, Sign Up, Log In).
 ## Credits
 
 I've searched many different pages for trouble shooting. Below are the main sources I used to get started for what I did not know.
